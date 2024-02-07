@@ -2,6 +2,7 @@ import { useState } from 'react';
 import WeatherSearchForm from './WeatherSearchForm';
 import WeatherDisplay from './WeatherDisplay';
 import SearchHistory from './SearchHistory';
+
 const WeatherComponent = () => {
   const [weather, setWeather] = useState(null);
   const [searchHistory, setSearchHistory] = useState([]);

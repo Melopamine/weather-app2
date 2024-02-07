@@ -1,13 +1,13 @@
-const SearchHistory = ({ searchHistory, fetchWeather, setSearchHistory }) => {
+const SearchHistory = ({ searchHistory, onHistoryClick, onClearHistory }) => {
   const clearSearchHistory = () => {
-    setSearchHistory([]);
+    onClearHistory();
   };
 
   return (
     <div>
       <h3>Search History</h3>
       {searchHistory.map((city, index) => (
-        <button key={index} onClick={() => fetchWeather(city)}>
+        <button key={index} onClick={() => onHistoryClick(city)}>
           {city}
         </button>
       ))}
